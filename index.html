@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="libs/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <span>X</span><span>设备测试预约系统</span><span>...</span>
+    </header>
+    <div class="mark">
+        <div class="box">
+             <div class="top">
+                <div class="pic"><img src="img/logo_01.png" alt=""></div>
+                <p>设备测试预约系统</p>
+            </div> 
+             <div class="form">
+            <p><span><img src="img/icon_01.png" alt=""></span><input type="text"placeholder='请输入手机号' class='tel'></p>
+            <p><span><img src="img/icon_03.png" alt=""></span><input type="password"placeholder='请输入密码' class='psd'></p>
+             <p class='btn'><input type="button" value='登陆账号开始预约'></p> 
+        </div>
+        </div>
+       
+    </div>
+    <script src='libs/jquery-2.1.1.min.js'></script>
+    <script>
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/375*100+'px';
+        $('.btn input').on('click',function(){
+            var tel=$.trim($('.tel').val());
+            var psd=$.trim($('.psd').val());
+            if(tel=='' || psd==''){
+                alert('请输入手机号或密码');
+            }else{
+                alert('登陆成功');
+            }
+        });
+
+    </script>
+</body>
+</html>
